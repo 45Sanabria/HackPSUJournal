@@ -15,11 +15,11 @@ config = {
 cnx = mysql.connector.connect(**config)
 cursor = cnx.cursor()
 
-entry = ("INSERT INTO test (num, entry) VALUES (001, 'This is a test')")
+
 
 num = input("entry number")
 text = input("entry:")
-entry = ("INSERT INTO test2 (num, entry) VALUES ({}, '{}')".format(num,text))
+entry = ("INSERT INTO test (num, entry) VALUES ({}, '{}')".format(num,text))
 cursor.execute(entry)
 
 cnx.commit()
